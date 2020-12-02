@@ -14,12 +14,21 @@ func main() {
 		//	fmt.Println(j)
 		//}()
 
+		//go func(x int) {
+		//	fmt.Println(x)
+		//}(i)
+
+		go func() {
+			time.Sleep(10 * time.Millisecond)
+			fmt.Println(i)
+		}()
+
 		//这个没有问题，值传递，
 		//go myRoutine(strconv.Itoa(i))
-		go myIntRoutine(i)
+		//go myIntRoutine(i)
 	}
-	fmt.Println("after loop")
-	//time.Sleep(1 * 30 * time.Second)
+	fmt.Println("after   loop")
+	//time.Sleep(3 * time.Second)
 
 }
 
