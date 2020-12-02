@@ -19,7 +19,7 @@ func main() {
 		//}(i)
 
 		go func() {
-			time.Sleep(10 * time.Millisecond)
+			//time.Sleep(10 * time.Millisecond)
 			fmt.Println(i)
 		}()
 
